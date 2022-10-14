@@ -1,0 +1,46 @@
+$scss-red: red;
+$scss-blue: blue;
+$scss-green: green;
+$scss-font-size: 24px;
+
+// mixins parameters --> color, border-color, font-size(default: 1rem)
+@mixin article($color, $border-color, $font-size: 1rem) {
+    border: 1px solid $border-color;
+    padding: 20px;
+    div {
+        &:first-child {
+            text-align: center;
+            h1 {
+                margin: 0;
+                color: $color;
+                text-decoration: underline;
+                text-decoration-color: $scss-blue;
+            }
+        }
+        &.paragraphs {
+            display: flex;
+            text-align: center;
+            p {
+                border: 1px solid $color;
+                padding: 35px;
+                &:nth-child(odd) {
+                    color: $scss-blue;
+                }
+                &:nth-child(even) {
+                    color: $border-color;
+                }
+            }
+        }
+        &:last-child {
+            border: 1px solid $scss-blue;
+            font-size: $font-size;
+            color: $color;
+            text-align: center;
+            padding: 20px;
+        }
+    }
+}
+
+body {
+    @include article($scss-green, $scss-red, $scss-font-size);
+}

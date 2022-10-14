@@ -1,0 +1,36 @@
+body {
+  border: 1px solid red;
+  padding: 20px;
+}
+body div:first-child {
+  text-align: center;
+}
+body div:first-child h1 {
+  margin: 0;
+  color: green;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+body div.paragraphs {
+  display: flex;
+  text-align: center;
+}
+body div.paragraphs p {
+  border: 1px solid green;
+  padding: 35px;
+}
+body div.paragraphs p:nth-child(odd) {
+  color: blue;
+}
+body div.paragraphs p:nth-child(even) {
+  color: red;
+}
+body div:last-child {
+  border: 1px solid blue;
+  font-size: 24px;
+  color: green;
+  text-align: center;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
